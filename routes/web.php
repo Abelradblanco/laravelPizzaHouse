@@ -19,5 +19,15 @@ Route::get('/', function () {
 });
 
 // pizza routes
-Route::get('/pizzas', [PizzaController::class, 'index']);  // Updated syntax for Laravel 8 and newer
-Route::get('/pizzas/{id}', [PizzaController::class, 'show']);  // Updated syntax for Laravel 8 and newer
+Route::get('/pizzas', [PizzaController::class, 'index']);  
+Route::get('/pizzas/create', [PizzaController::class, 'showCreate']);
+Route::post('pizzas', [PizzaController::class, 'store']);  
+Route::get('/pizzas/{id}', [PizzaController::class, 'show']);  
+Route::delete('/pizzas/{id}', [PizzaController::class, 'delete']); 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

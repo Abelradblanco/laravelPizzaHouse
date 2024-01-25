@@ -15,14 +15,41 @@ class PizzaController extends Controller
   //$pizzas = Pizza::where('type', 'hawaiian')->get();
    $pizzas = Pizza::latest()->get();
 
-    return view('pizzas', [
+    return view('pizzas.index', [
       'pizzas' => $pizzas,
     ]);
   }
 
   public function show($id) {
+
+    $pizza = Pizza::findOrFail($id);
+
     // use the $id variable to query the db for a record
-    return view('details', ['id' => $id]);
+    return view('pizzas.show', ['pizza' => $pizza]);
+  }
+
+  public function showCreate(){
+    return view('pizzas.create');
+  }
+
+  public function store(){
+
+    $pizza = new Pizza();
+    $pizza->name = request('name');
+    $pizza->type = request('type');
+    $pizza->base = request('base');
+    $pizza->toppings = request('toppings');
+
+    $pizza->save();
+
+    return redirect('/')->with('mssg', 'Thank you for your order');
+  }
+
+  public function delete($id) {
+    $pizza = Pizza::findOrFail($id);
+    $pizza->delete();
+    return redirect('/pizzas')->with('mssg', "Completed {$pizza->name}'s order");
+    
   }
 
 }
