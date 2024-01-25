@@ -37,17 +37,33 @@ class PizzaController extends Controller
     return view('pizzas.create');
   }
 
-  public function store(){
+  public function store(Request $request){
 
-    $pizza = new Pizza();
-    $pizza->name = request('name');
-    $pizza->type = request('type');
-    $pizza->base = request('base');
-    $pizza->toppings = request('toppings');
+     // Validation rules
+     $rules = [
+      'name' => 'required|min:3', // 'name' is required and must have a minimum length of 3 characters
+      'type' => 'required',
+      'base' => 'required',
+      'toppings' => 'required|array|min:1', // 'toppings' is required and must be an array with at least one element
+  ];
 
-    $pizza->save();
+  // Validate the request data
+  $request->validate($rules);
 
-    return redirect('/')->with('mssg', 'Thank you for your order');
+  // Create a new Pizza instance
+  $pizza = new Pizza();
+
+  // Set the pizza properties based on the validated data
+  $pizza->name = $request->input('name');
+  $pizza->type = $request->input('type');
+  $pizza->base = $request->input('base');
+  $pizza->toppings = $request->input('toppings');
+
+  // Save the pizza instance to the database
+  $pizza->save();
+
+  // Redirect to the home page with a success message
+  return redirect('/')->with('mssg', 'Thank you for your order');
   }
 
   public function delete($id) {

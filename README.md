@@ -1,5 +1,9 @@
-Pizzahouse Laravel app
-built from youtube to learn Laravel
+### Pizzahouse Laravel app  ###
+Pizza Ordering System created using laravel and laravel/ui for proper authentication
+
+
+
+### Some side notes for me to note: ###
 
 # Get into mysql
 mysql -u root -p 

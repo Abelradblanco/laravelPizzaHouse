@@ -40,6 +40,25 @@ html, body {
     text-decoration: none;
     text-transform: uppercase;
   }
+
+  .navbar-brand {
+    font-size: 2rem; 
+    font-weight: bold;
+    color: #5e2195; 
+    text-decoration: none; 
+}
+
+.navbar-brand:hover {
+    color: #4a1872; 
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem; /* Adjust the font size according to your preference */
+}
+
+.navbar-nav .dropdown-toggle {
+  font-size: 1.2rem; /* Adjust the font size for the dropdown toggle */
+}
   
   .m-b-md {
     margin-bottom: 30px;
@@ -64,42 +83,155 @@ html, body {
     padding: 10px;
     margin: 20px auto;
   }
+
+  //welcome page
+/* Add these styles to your CSS or SCSS file */
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.logo {
+  width: 100%; /* Make the image responsive */
+  max-width: 400px; /* Set a maximum width for larger screens */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 3rem; /* Responsive font size */
+  color: #5e2195;
+  margin-bottom: 20px;
+}
+
+.mssg {
+  font-size: 1.5rem; /* Responsive font size */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.order-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5e2195;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem; /* Responsive font size */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+      background-color: #4a1872;
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) {
+  .title {
+      font-size: 4rem; /* Larger font size for larger screens */
+  }
+
+  .mssg {
+      font-size: 2rem; /* Larger font size for larger screens */
+  }
+
+  .order-link {
+      font-size: 2rem; /* Larger font size for larger screens */
+  }
+}
+
   
   /* create pizza form */
+  .wrapper.create-pizza {
+    text-align: center;
   
-  .create-pizza{
-    background: #f7f7f7;
-    padding: 20px;
-  
-    label, select{
-      display: block;
+    h1 {
+      font-size: 40px; /* Increased font size */
+      color: #5e2195;
+      margin-bottom: 20px;
     }
   
-    label{
-      margin-top: 30px;
-    }
+    .pizza-form {
+      max-width: 400px;
+      margin: 0 auto;
   
-    select{
-      padding: 8px;
-      width: 200px;
-    }
+      .form-group {
+        margin-bottom: 20px;
   
-    input[type=checkbox]{
-      margin: 10px;
-    }
+        label {
+          display: block;
+          margin-bottom: 5px;
+          color: #333;
+          font-size: 22px; /* Increased font size */
+        }
   
-    input[type=submit]{
-      background: #5e2195;
-      padding: 8px 20px;
-      color: #fff;
-      border: 0;
-      margin-top: 20px;
-    }
-    
-    fieldset{
-        border: none;
+        .form-control {
+          width: 100%;
+          padding: 10px; /* Increased padding */
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          box-sizing: border-box;
+          font-size: 22px; /* Increased font size */
+        }
+      }
+  
+      .topping-checkboxes {
+        display: flex;
+        flex-wrap: wrap;
+  
+        .topping-checkbox {
+          width: 100%;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+  
+          input[type="checkbox"] {
+            margin-right: 10px; /* Increased margin for better spacing */
+            font-size: 22px; /* Increased font size */
+          }
+  
+          label {
+            font-size: 22px; /* Adjusted font size */
+          }
+        }
+      }
+  
+      .order-btn {
+        background: #5e2195;
+        color: #fff;
+        padding: 14px 20px; /* Increased padding */
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        font-size: 20px; /* Increased font size */
+  
+        &:hover {
+          background: #4a1872;
+        }
+      }
     }
   }
+  
   
   /* pizza details page */
   
@@ -112,7 +244,7 @@ html, body {
       font-weight: bold;
     }
     button{
-      background: #5e2195;
+      
       padding: 8px 20px;
       color: #fff;
       border: 0;
@@ -126,32 +258,60 @@ html, body {
     color: #5e2195;
     margin-bottom: 20px;
   }
-  
+
   /* pizza index page */
-  
-  .pizza-index{
-    h1{
+
+  .pizza-index {
+    h1 {
       margin-bottom: 40px;
     }
-    .pizza-item{
+  
+    .pizza-item {
       margin: 10px 0;
       padding: 12px;
       background: #f4f4f4;
-      img{
-        width: 60px;
-        display: inline-block;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+      width: 100%;
+      cursor: pointer;
+  
+      &:hover {
+        transform: scale(1.02);
       }
-      h4{
-        display: inline-block;
-        font-weight: normal;
-        margin-left: 20px;
-        a{
-          color: #777;
-          text-decoration: none !important;
+  
+      .pizza-details {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+  
+        .pizza-image {
+          margin-right: 20px; /* Add some space between icon and name */
+          img {
+            width: 40px;
+            vertical-align: middle;
+          }
+        }
+  
+        h4 {
+          font-size: 24px;
+          margin: 0;
+  
+          a {
+            color: #333;
+            text-decoration: none !important;
+            font-weight: bold;
+            transition: color 0.3s ease;
+  
+            &:hover {
+              color: #5e2195;
+            }
+          }
         }
       }
     }
   }
+
 
   //show pizza orders:
    .wrapper {
@@ -216,64 +376,121 @@ html, body {
 
 //show pizza details:
 
-
-.pizza-header {
+.pizza-details {
   text-align: center;
-  margin-bottom: 30px;
 }
 
+.order-title {
+  font-size: 36px;
+  color: #5e2195;
+  margin-bottom: 20px;
+}
+
+.customer-name {
+  font-size: 40px;
+  font-weight: bold;
+  color:#5e2195;
+}
+
+/* Styling for pizza info and actions */
+
 .pizza-info {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  font-size:x-large;
+}
 
-  .pizza-type,
-  .pizza-base,
-  .pizza-toppings {
-      margin-bottom: 15px;
-  }
+.info-text {
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
 
-  ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      li {
-          margin-bottom: 5px;
-      }
-  }
+.info-value {
+  color: #5e2195;
+  font-weight: bold;
+}
+
+.toppings-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toppings-list li {
+  margin-bottom: 5px;
+  color: #5e2195;
 }
 
 .pizza-actions {
-  text-align: center;
   margin-top: 20px;
+}
 
-  .button-container {
-    display: flex;
-    justify-content: flex-start;
+.button-container {
+  display: flex;
+  justify-content: center;
+}
 
-    .view-all-pizzas-btn,
-    .complete-order-btn {
-        background: #5e2195;
-        padding: 12px 20px; /* Adjusted to make both buttons the same size */
-        color: #fff;
-        text-decoration: none;
-        border: 0;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background 0.3s ease;
+.view-all-pizzas-btn,
+.complete-order-btn {
+  background: #5e2195;
+  padding: 15px 25px;
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 0 10px;
+}
 
-        &:hover {
-            background: #4a1872;
-        }
-    }
+.complete-order-btn {
+  background: #e74c3c;
+}
 
-    .complete-order-btn {
-        background: red; /* Changed to red color */
-        margin-left: 10px; /* Added margin to separate the buttons */
-    }
+/* dashboard.scss */
+
+.dashboard-container {
+  text-align: center;
+  padding: 40px;
+
+  .alert {
+      margin-bottom: 20px;
   }
 
+  .dashboard-welcome {
+      .welcome-text {
+          color: #8A2BE2; /* Purple color for Welcome text */
+          font-size: 50px; /* Adjust the font size */
+          font-weight: bold; /* Bold font */
+          margin-bottom: 20px;
+      }
+
+      .user-info {
+          font-size: 20px;
+          span {
+              font-weight: bold;
+          }
+      }
+  }
+
+  .not-logged-in {
+      font-size: 18px;
+      margin-bottom: 20px;
+  }
+
+  .action-link {
+      margin-top: 20px;
+
+      a {
+          text-decoration: none;
+          background-color: #8A2BE2; /* Purple color for the button */
+          color: #fff; /* White text color */
+          padding: 15px 30px; /* Adjust the padding */
+          font-size: 18px; /* Adjust the font size */
+          font-weight: bold; /* Bold font */
+          border-radius: 8px; /* Rounded corners */
+      }
+  }
 }
 
 

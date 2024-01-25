@@ -18,7 +18,9 @@
       @yield('content')
 
       <footer>
-        <p>Copyright 2020 Pizza House</p>
+        <div class="container">
+          <p>&copy; {{ date('Y') }} PizzaHouse. Created by: Abel Blanco</p>
+      </div>
       </footer>
     </body>
 </html>

@@ -25,9 +25,10 @@ Route::post('pizzas', [PizzaController::class, 'store'])->name('pizzas.store');
 Route::get('/pizzas/{id}', [PizzaController::class, 'show'])->middleware('auth')->name('pizzas.show');  
 Route::delete('/pizzas/{id}', [PizzaController::class, 'delete'])->name('pizzas.delete')->middleware('auth'); 
 
-//this disables the "register option"
-Auth::routes([
-  'register' => false
-]);
+Auth::routes();
+// //this disables the "register option"
+// Auth::routes([
+//   'register' => false
+// ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
