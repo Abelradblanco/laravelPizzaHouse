@@ -152,3 +152,130 @@ html, body {
       }
     }
   }
+
+  //show pizza orders:
+   .wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.pizza-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pizza-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pizza-item {
+    width: 48%;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    .pizza-image {
+        text-align: center;
+        img {
+            width: 80px;
+        }
+    }
+
+    .pizza-details {
+        margin-top: 10px;
+        h4 {
+            font-size: 18px;
+            margin: 0;
+            a {
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+                &:hover {
+                    color: #5e2195;
+                }
+            }
+        }
+    }
+}
+
+.no-pizzas {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+//show pizza details:
+
+
+.pizza-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pizza-info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .pizza-type,
+  .pizza-base,
+  .pizza-toppings {
+      margin-bottom: 15px;
+  }
+
+  ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      li {
+          margin-bottom: 5px;
+      }
+  }
+}
+
+.pizza-actions {
+  text-align: center;
+  margin-top: 20px;
+
+  .button-container {
+    display: flex;
+    justify-content: flex-start;
+
+    .view-all-pizzas-btn,
+    .complete-order-btn {
+        background: #5e2195;
+        padding: 12px 20px; /* Adjusted to make both buttons the same size */
+        color: #fff;
+        text-decoration: none;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: #4a1872;
+        }
+    }
+
+    .complete-order-btn {
+        background: red; /* Changed to red color */
+        margin-left: 10px; /* Added margin to separate the buttons */
+    }
+  }
+
+}
+
+
+
+

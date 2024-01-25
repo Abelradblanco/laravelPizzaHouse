@@ -141,3 +141,114 @@ a.back {
   color: #777;
   text-decoration: none !important;
 }
+
+.wrapper {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.pizza-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pizza-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pizza-item {
+  width: 48%;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.pizza-item:hover {
+  transform: scale(1.02);
+}
+.pizza-item .pizza-image {
+  text-align: center;
+}
+.pizza-item .pizza-image img {
+  width: 80px;
+}
+.pizza-item .pizza-details {
+  margin-top: 10px;
+}
+.pizza-item .pizza-details h4 {
+  font-size: 18px;
+  margin: 0;
+}
+.pizza-item .pizza-details h4 a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.pizza-item .pizza-details h4 a:hover {
+  color: #5e2195;
+}
+
+.no-pizzas {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.pizza-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pizza-info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.pizza-info .pizza-type,
+.pizza-info .pizza-base,
+.pizza-info .pizza-toppings {
+  margin-bottom: 15px;
+}
+.pizza-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.pizza-info ul li {
+  margin-bottom: 5px;
+}
+
+.pizza-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+.pizza-actions .button-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.pizza-actions .button-container .view-all-pizzas-btn,
+.pizza-actions .button-container .complete-order-btn {
+  background: #5e2195;
+  padding: 12px 20px; /* Adjusted to make both buttons the same size */
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.pizza-actions .button-container .view-all-pizzas-btn:hover,
+.pizza-actions .button-container .complete-order-btn:hover {
+  background: #4a1872;
+}
+.pizza-actions .button-container .complete-order-btn {
+  background: red; /* Changed to red color */
+  margin-left: 10px; /* Added margin to separate the buttons */
+}
