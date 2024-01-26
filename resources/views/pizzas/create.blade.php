@@ -26,7 +26,7 @@
           <option value="thin & crispy">Thin & Crispy</option>
           <option value="thick">Thick</option>
         </select>
-      </div>
+      </div> 
       <fieldset class="form-group">
         <legend>Extra toppings:</legend>
         <div class="topping-checkboxes">

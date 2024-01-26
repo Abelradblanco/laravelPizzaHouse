@@ -155,12 +155,13 @@ footer {
 }
 /* create pizza form */
 .wrapper.create-pizza {
-  text-align: center;
+  text-align: left;
 }
 .wrapper.create-pizza h1 {
   font-size: 40px; /* Increased font size */
   color: #5e2195;
   margin-bottom: 20px;
+  text-align: center;
 }
 .wrapper.create-pizza .pizza-form {
   max-width: 400px;
@@ -173,15 +174,16 @@ footer {
   display: block;
   margin-bottom: 5px;
   color: #333;
-  font-size: 22px; /* Increased font size */
+  font-size: 22px;
+  text-align: left;
 }
 .wrapper.create-pizza .pizza-form .form-group .form-control {
   width: 100%;
-  padding: 10px; /* Increased padding */
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size: 22px; /* Increased font size */
+  font-size: 22px;
 }
 .wrapper.create-pizza .pizza-form .topping-checkboxes {
   display: flex;

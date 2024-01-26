@@ -162,12 +162,13 @@ html, body {
   
   /* create pizza form */
   .wrapper.create-pizza {
-    text-align: center;
+    text-align: left;
   
     h1 {
       font-size: 40px; /* Increased font size */
       color: #5e2195;
       margin-bottom: 20px;
+      text-align: center;
     }
   
     .pizza-form {
@@ -181,16 +182,17 @@ html, body {
           display: block;
           margin-bottom: 5px;
           color: #333;
-          font-size: 22px; /* Increased font size */
+          font-size: 22px;
+          text-align: left;
         }
   
         .form-control {
           width: 100%;
-          padding: 10px; /* Increased padding */
+          padding: 10px; 
           border: 1px solid #ddd;
           border-radius: 4px;
           box-sizing: border-box;
-          font-size: 22px; /* Increased font size */
+          font-size: 22px; 
         }
       }
   
